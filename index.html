@@ -119,7 +119,7 @@
             <!-- Eyebrow -->
             <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 border border-[#ff6b00]/40 bg-[#ff6b00]/10 rounded-full">
               <span class="w-2 h-2 rounded-full bg-[#ff6b00] animate-pulse"></span>
-              <span class="text-xs font-semibold text-[#ffb693] tracking-wider">خبرة أكثر من ١٠ سنوات في مصر</span>
+              <span class="text-xs font-semibold text-[#ffb693] tracking-wider">خبرة أكثر من 25 عام في مصر</span>
             </div>
 
             <h1 class="font-bold mb-6 leading-tight" style="font-size: clamp(1.9rem, 4vw, 3.2rem); letter-spacing: -0.02em; color: #e5e2e1;">
@@ -146,12 +146,12 @@
             <!-- Stats strip -->
             <div class="grid grid-cols-4 border border-[#3a3230] bg-[#201f1f]/80 backdrop-blur-sm">
               <div class="text-center px-3 py-4 border-l border-[#3a3230]">
-                <div class="text-xl font-bold" style="color: #ff6b00">+١٠</div>
+                <div class="text-xl font-bold" style="color: #ff6b00">+25</div>
                 <div class="text-xs mt-1" style="color: #a98a7d">سنوات خبرة</div>
               </div>
               <div class="text-center px-3 py-4 border-l border-[#3a3230]">
                 <div class="text-xl font-bold" style="color: #ff6b00">دقة</div>
-                <div class="text-xs mt-1" style="color: #a98a7d">ميكرون</div>
+                <div class="text-xs mt-1" style="color: #a98a7d"></div>
               </div>
               <div class="text-center px-3 py-4 border-l border-[#3a3230]">
                 <div class="text-xl font-bold" style="color: #ff6b00">CNC</div>
@@ -409,7 +409,68 @@
       <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
         <div class="flex flex-col items-center md:items-start gap-2">
           <span class="text-xl font-bold" style="color: #ffb693">المهندس للخراطة</span>
-          <p class="text-xs" style="color: #a98a7d">© 2024 المهندس للخراطة الميكانيكية وعمرة المواتير. جميع الحقوق محفوظة.</p>
+          <p class="text-xs" style="color: #a98a7d">المهندس للخراطة الميكانيكية وعمرة المواتير. جميع الحقوق محفوظة.</p>
+          <style>
+  .dev-link {
+    color: #ffb693;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    position: relative;
+  }
+
+  .dev-link:hover {
+    color: #ffffff;
+    text-shadow: 0 0 10px #ffb693, 0 0 20px #ffb693;
+    transform: translateY(-2px);
+  }
+
+  .dev-link:active {
+    transform: scale(0.95);
+  }
+
+  .dev-link svg {
+    transition: transform 0.3s ease;
+  }
+
+  .dev-link:hover svg {
+    transform: rotate(10deg) scale(1.1);
+  }
+
+  .dev-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #ffb693;
+    transition: 0.3s;
+  }
+
+  .dev-link:hover::after {
+    width: 100%;
+  }
+</style>
+
+<p class="text-xs" style="color: #a98a7d">
+  تصميم وتطوير:
+  <a href="https://www.linkedin.com/in/ahmed-shawki-8538042b0/"
+     target="_blank"
+     rel="noopener noreferrer"
+     class="dev-link">
+
+    البشمهندس أحمد شوقي
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM6.82 20.45H3.86V9h2.96v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+    </svg>
+
+  </a>
+</p>
         </div>
         <div class="flex items-center gap-8">
           <a href="#home" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">الرئيسية</a>
