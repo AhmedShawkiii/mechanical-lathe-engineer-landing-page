@@ -1,0 +1,213 @@
+/* ═══════════════════════════════════════════════════════
+   style.css — المهندس للخراطة الميكانيكية وعمرة المواتير
+   ═══════════════════════════════════════════════════════ */
+
+/* ── Reset & Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  background-color: #131313;
+  color: #e5e2e1;
+  -webkit-font-smoothing: antialiased;
+  will-change: auto;
+}
+
+/* ── Material Icons ── */
+.material-symbols-outlined {
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 400,
+    "GRAD" 0,
+    "opsz" 24;
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0e0e0e;
+}
+::-webkit-scrollbar-thumb {
+  background: #353534;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff6b00;
+}
+
+/* ── Service Cards ── */
+.service-card {
+  will-change: transform;
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+.service-card:hover {
+  transform: translateY(-4px);
+  border-color: #ff6b00;
+  box-shadow: 0 12px 40px rgba(255, 107, 0, 0.15);
+}
+
+/* ── Gallery ── */
+.gallery-item {
+  will-change: transform;
+  overflow: hidden;
+}
+.gallery-item img {
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+  filter: grayscale(60%);
+}
+.gallery-item:hover img {
+  transform: scale(1.04);
+  filter: grayscale(0%);
+}
+.gallery-overlay {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+/* ── Orange Accent Line ── */
+.accent-line::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 3px;
+  background: #ff6b00;
+  margin-left: 12px;
+  vertical-align: middle;
+}
+
+/* ── Logo ── */
+.logo-main {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: #ffb693;
+  line-height: 1.1;
+}
+.logo-sub {
+  font-size: 10px;
+  font-weight: 400;
+  color: #a98a7d;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+/* ── WhatsApp Card ── */
+.whatsapp-card {
+  background: linear-gradient(135deg, #1a2e1a 0%, #0d1f0d 100%);
+  border: 1px solid #25d366;
+  position: relative;
+  overflow: hidden;
+}
+.whatsapp-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(37, 211, 102, 0.06) 0%,
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+/* ── Buttons ── */
+.btn-whatsapp {
+  background: #25d366;
+  color: #fff;
+  will-change: transform;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+.btn-whatsapp:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+.btn-whatsapp:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  will-change: transform;
+  transition:
+    transform 0.15s ease,
+    filter 0.15s ease;
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+}
+.btn-primary:active {
+  transform: scale(0.97);
+}
+
+/* ── Reveal Animation ── */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Hero Stats Strip ── */
+.hero-stats-item {
+  border-left: 1px solid #3a3230;
+}
+.hero-stats-item:last-child {
+  border-left: none;
+}
+@media (max-width: 640px) {
+  .hero-stats-item {
+    border-left: none;
+    border-top: 1px solid #3a3230;
+  }
+  .hero-stats-item:first-child {
+    border-top: none;
+  }
+}
+
+/* ── Owner Card ── */
+.owner-card {
+  background: linear-gradient(135deg, #1c1b1b 0%, #201f1f 100%);
+  border: 1px solid #3a3230;
+  position: relative;
+}
+.owner-card::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b00, #ffb693, #ff6b00);
+}

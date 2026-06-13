@@ -1,0 +1,469 @@
+<!doctype html>
+<html class="dark" dir="rtl" lang="ar">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>المهندس للخراطة الميكانيكية وعمرة المواتير</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#ffb693",
+              "primary-container": "#ff6b00",
+              "on-primary": "#561f00",
+              "on-primary-fixed": "#351000",
+              secondary: "#c1c7cf",
+              "secondary-container": "#41474e",
+              "on-secondary": "#2b3137",
+              tertiary: "#c8c6c5",
+              surface: "#131313",
+              "surface-dim": "#0e0e0e",
+              "surface-bright": "#3a3939",
+              "surface-container": "#201f1f",
+              "surface-container-low": "#1c1b1b",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-highest": "#353534",
+              "surface-container-lowest": "#0e0e0e",
+              background: "#131313",
+              "on-surface": "#e5e2e1",
+              "on-surface-variant": "#e2bfb0",
+              outline: "#a98a7d",
+              "outline-variant": "#3a3230",
+              error: "#ffb4ab",
+              "inverse-surface": "#e5e2e1",
+              "inverse-on-surface": "#313030",
+              "inverse-primary": "#a04100",
+            },
+            fontFamily: {
+              sans: ["IBM Plex Sans Arabic", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+
+    <!-- ═══════════ NAVBAR ═══════════ -->
+    <nav
+      class="fixed top-0 inset-x-0 z-50 h-16 flex items-center justify-between px-4 md:px-16 bg-[#131313]/90 backdrop-blur-md border-b border-[#3a3230]"
+      style="will-change: transform"
+    >
+      <!-- Logo -->
+      <div class="flex flex-col leading-tight">
+        <span class="logo-main">المهندس</span>
+        <span class="logo-sub">للخراطة الميكانيكية وعمرة المواتير</span>
+      </div>
+
+      <!-- Nav links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#home" class="text-sm font-semibold text-[#ffb693] border-b-2 border-[#ff6b00] pb-0.5">الرئيسية</a>
+        <a href="#services" class="text-sm font-medium text-[#c1c7cf] hover:text-[#ffb693] transition-colors">خدماتنا</a>
+        <a href="#gallery" class="text-sm font-medium text-[#c1c7cf] hover:text-[#ffb693] transition-colors">المعرض</a>
+        <a href="#owner" class="text-sm font-medium text-[#c1c7cf] hover:text-[#ffb693] transition-colors">الإدارة</a>
+        <a href="#contact" class="text-sm font-medium text-[#c1c7cf] hover:text-[#ffb693] transition-colors">اتصل بنا</a>
+      </div>
+
+      <!-- CTA -->
+      <a
+        href="https://wa.me/201104716408"
+        target="_blank"
+        rel="noopener"
+        class="btn-whatsapp flex items-center gap-2 px-5 py-2 rounded text-sm font-bold"
+      >
+        <span class="material-symbols-outlined" style="font-size: 18px">chat</span>
+        واتساب
+      </a>
+    </nav>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="home" class="relative min-h-screen flex items-center pt-16 overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 z-0">
+        <img
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdZXgYjzXM2BZ785PLPKAvgJ4KWvCSKb_AZZuWdSu3gMlSjH8p0hOq4Kn3_RfqkBbUO3ppqZDPLzGhMAQzPPIzPvpuTVE0VfHfd_xP_iNcwn9aNoK1f_-w0thfjM1bns8dc7t-rwaGixuZL--TsDQ2f-eo2Qb5Q2PJxbazsxU8mDUuOm6GuGn39vKrGOMQT0-Ce4OJo8kP2Gr2DfzWdGDsax6-zhdeqBeq8WMoVJXo0U4u0Hldz1hCvJuzaKwlArZh9ts8JBcBNsKb"
+          alt=""
+          class="w-full h-full object-cover"
+          style="opacity: 0.3; filter: grayscale(0.4)"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to top, #131313 15%, rgba(19,19,9,0.7) 50%, rgba(19,19,19,0.3) 100%);"></div>
+        <!-- Subtle grid overlay -->
+        <div class="absolute inset-0" style="background-image: repeating-linear-gradient(0deg, transparent, transparent 79px, rgba(255,107,0,0.04) 80px), repeating-linear-gradient(90deg, transparent, transparent 79px, rgba(255,107,0,0.04) 80px); pointer-events: none;"></div>
+      </div>
+
+      <div class="relative z-10 w-full max-w-6xl mx-auto px-4 md:px-16 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+          <!-- Text column (right) -->
+          <div class="text-right order-2 lg:order-1">
+            <!-- Eyebrow -->
+            <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 border border-[#ff6b00]/40 bg-[#ff6b00]/10 rounded-full">
+              <span class="w-2 h-2 rounded-full bg-[#ff6b00] animate-pulse"></span>
+              <span class="text-xs font-semibold text-[#ffb693] tracking-wider">خبرة أكثر من ١٠ سنوات في مصر</span>
+            </div>
+
+            <h1 class="font-bold mb-6 leading-tight" style="font-size: clamp(1.9rem, 4vw, 3.2rem); letter-spacing: -0.02em; color: #e5e2e1;">
+              المهندس للخراطة الميكانيكية<br />
+              <span style="color: #ff6b00">وعمرة المواتير</span>
+            </h1>
+
+            <p class="mb-10 leading-relaxed" style="font-size: 1.05rem; color: #c1c7cf; opacity: 0.9">
+              دقة هندسية عالية في عمرة المحركات وخراطة أجزاء السيارات — بأحدث المعدات وأعلى معايير الجودة لضمان أداء يدوم وموثوقية لا تضاهى.
+            </p>
+
+            <!-- CTAs -->
+            <div class="flex flex-col sm:flex-row gap-4 mb-12">
+              <a href="https://wa.me/201104716408" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-3 px-7 py-4 rounded font-bold text-base">
+                <span class="material-symbols-outlined">chat</span>
+                تواصل عبر واتساب
+              </a>
+              <a href="tel:+201104716408" class="flex items-center justify-center gap-3 px-7 py-4 rounded font-bold text-base border-2 border-[#c1c7cf]/40 text-[#c1c7cf] hover:border-[#ffb693] hover:text-[#ffb693] transition-colors">
+                <span class="material-symbols-outlined">call</span>
+                اتصل بنا الآن
+              </a>
+            </div>
+
+            <!-- Stats strip -->
+            <div class="grid grid-cols-4 border border-[#3a3230] bg-[#201f1f]/80 backdrop-blur-sm">
+              <div class="text-center px-3 py-4 border-l border-[#3a3230]">
+                <div class="text-xl font-bold" style="color: #ff6b00">+١٠</div>
+                <div class="text-xs mt-1" style="color: #a98a7d">سنوات خبرة</div>
+              </div>
+              <div class="text-center px-3 py-4 border-l border-[#3a3230]">
+                <div class="text-xl font-bold" style="color: #ff6b00">دقة</div>
+                <div class="text-xs mt-1" style="color: #a98a7d">ميكرون</div>
+              </div>
+              <div class="text-center px-3 py-4 border-l border-[#3a3230]">
+                <div class="text-xl font-bold" style="color: #ff6b00">CNC</div>
+                <div class="text-xs mt-1" style="color: #a98a7d">معدات حديثة</div>
+              </div>
+              <div class="text-center px-3 py-4">
+                <div class="text-xl font-bold" style="color: #ff6b00">١٠٠٪</div>
+                <div class="text-xs mt-1" style="color: #a98a7d">جودة مضمونة</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Owner portrait column (left) -->
+          <div class="order-1 lg:order-2 flex justify-center lg:justify-start">
+            <div class="relative" style="max-width: 380px; width: 100%">
+              <!-- Decorative orange corner frame -->
+              <div class="absolute -top-3 -right-3 w-16 h-16 pointer-events-none" style="border-top: 3px solid #ff6b00; border-right: 3px solid #ff6b00;"></div>
+              <div class="absolute -bottom-3 -left-3 w-16 h-16 pointer-events-none" style="border-bottom: 3px solid #ff6b00; border-left: 3px solid #ff6b00;"></div>
+              <!-- Glow backdrop -->
+              <div class="absolute inset-0 rounded" style="box-shadow: 0 0 60px rgba(255,107,0,0.18); pointer-events: none;"></div>
+              <!-- Image -->
+              <div class="overflow-hidden border border-[#3a3230]" style="aspect-ratio: 3/4">
+                <img
+                  src="المهندس.png"
+                  alt="المهندس عبدالله الخشن — مدير المركز"
+                  class="w-full h-full object-cover object-top"
+                  loading="eager"
+                  style="filter: contrast(1.05) brightness(0.95)"
+                />
+              </div>
+              <!-- Name badge -->
+              <div class="absolute bottom-0 inset-x-0 p-5" style="background: linear-gradient(to top, rgba(13,13,13,0.95) 60%, transparent 100%);">
+                <p class="text-xs font-semibold tracking-widest mb-1" style="color: #ff6b00">مدير المركز</p>
+                <p class="text-xl font-bold leading-tight" style="color: #e5e2e1">المهندس عبدالله الخشن</p>
+                <p class="text-xs mt-1.5" style="color: #a98a7d">خبرة طويلة في عمرة المواتير والخراطة الميكانيكية</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ SERVICES ═══════════ -->
+    <section id="services" class="py-24 bg-[#0e0e0e]">
+      <div class="max-w-6xl mx-auto px-4 md:px-16">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div class="max-w-2xl">
+            <p class="text-xs font-semibold tracking-widest mb-3" style="color: #ff6b00">خدماتنا الهندسية</p>
+            <h2 class="text-3xl md:text-4xl font-bold leading-tight" style="color: #e5e2e1">حلول متكاملة في ميكانيكا المحركات</h2>
+            <p class="mt-4 text-base leading-relaxed" style="color: #c1c7cf">نقدم خدمات احترافية في الخراطة الدقيقة وعمرة المحركات باستخدام أحدث الأجهزة الرقمية واليدوية.</p>
+          </div>
+          <div class="h-px w-24 md:mb-4" style="background: linear-gradient(90deg, #ff6b00, transparent)"></div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Card 1 -->
+          <div class="service-card bg-[#201f1f] border border-[#3a3230] p-7 flex flex-col items-start gap-5 relative reveal">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="p-3 border border-[#3a3230] text-[#ffb693]" style="background: #2a2a2a">
+              <span class="material-symbols-outlined" style="font-size: 28px">settings_input_component</span>
+            </div>
+            <h3 class="text-xl font-bold" style="color: #e5e2e1">عمرة المواتير</h3>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">إعادة بناء المحركات بالكامل لضمان عودة الأداء الأصلي وتقليل استهلاك الوقود وإطالة عمر المحرك.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="service-card bg-[#201f1f] border border-[#3a3230] p-7 flex flex-col items-start gap-5 relative reveal">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="p-3 border border-[#3a3230] text-[#ffb693]" style="background: #2a2a2a">
+              <span class="material-symbols-outlined" style="font-size: 28px">manage_search</span>
+            </div>
+            <h3 class="text-xl font-bold" style="color: #e5e2e1">فحص وتشخيص المحركات</h3>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">تشخيص الأعطال الميكانيكية بدقة وتحديد أسباب ضعف الأداء واستهلاك الوقود باستخدام أحدث أجهزة الفحص لضمان أفضل كفاءة للمحرك.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="service-card bg-[#201f1f] border border-[#3a3230] p-7 flex flex-col items-start gap-5 relative reveal">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="p-3 border border-[#3a3230] text-[#ffb693]" style="background: #2a2a2a">
+              <span class="material-symbols-outlined" style="font-size: 28px">construction</span>
+            </div>
+            <h3 class="text-xl font-bold" style="color: #e5e2e1">تجليخ عمود الكرنك</h3>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">استعادة توازن عمود الكرنك وتجليخ الأسطح بدقة تصل إلى جزء من المليمتر لأداء أمثل.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="service-card bg-[#201f1f] border border-[#3a3230] p-7 flex flex-col items-start gap-5 relative reveal">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="p-3 border border-[#3a3230] text-[#ffb693]" style="background: #2a2a2a">
+              <span class="material-symbols-outlined" style="font-size: 28px">build</span>
+            </div>
+            <h3 class="text-xl font-bold" style="color: #e5e2e1">خراطه وش السلندر</h3>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">صيانة وتجهيز رؤوس المحركات وتشحيم المراسي والصمامات بمهارة فنية عالية.</p>
+          </div>
+          <!-- Card 5 -->
+          <div class="service-card bg-[#201f1f] border border-[#3a3230] p-7 flex flex-col items-start gap-5 relative reveal sm:col-span-2">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="p-3 border border-[#3a3230] text-[#ffb693]" style="background: #2a2a2a">
+              <span class="material-symbols-outlined" style="font-size: 28px">tune</span>
+            </div>
+            <h3 class="text-xl font-bold" style="color: #e5e2e1">البساتم والتشغيل الدقيق</h3>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">تصنيع وصيانة البساتم وكافة القطع الدقيقة بمعايير دولية عالية الجودة لضمان التشغيل السلس.</p>
+          </div>
+          <!-- Card 6 -->
+          <div class="service-card bg-[#201f1f] border border-[#3a3230] p-7 flex flex-col items-start gap-5 relative reveal sm:col-span-2">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="p-3 border border-[#3a3230] text-[#ffb693]" style="background: #2a2a2a">
+              <span class="material-symbols-outlined" style="font-size: 28px">layers</span>
+            </div>
+            <h3 class="text-xl font-bold" style="color: #e5e2e1">تجميع وفحص المحركات</h3>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">تجميع المحركات بعد الإصلاح وفحصها بالكامل للتأكد من الأداء الأمثل قبل التسليم.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ GALLERY ═══════════ -->
+    <section id="gallery" class="py-24 bg-[#131313]">
+      <div class="max-w-6xl mx-auto px-4 md:px-16">
+        <div class="text-center mb-14">
+          <p class="text-xs font-semibold tracking-widest mb-3" style="color: #ff6b00">معرض الأعمال</p>
+          <h2 class="text-3xl md:text-4xl font-bold" style="color: #e5e2e1">الأعمال الهندسية</h2>
+        </div>
+
+        <!-- Bento/Masonry Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 auto-rows-[200px] md:auto-rows-[220px]">
+          <!-- Item 1 — Large -->
+          <div class="gallery-item col-span-2 row-span-2 relative border border-[#3a3230]">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdZXgYjzXM2BZ785PLPKAvgJ4KWvCSKb_AZZuWdSu3gMlSjH8p0hOq4Kn3_RfqkBbUO3ppqZDPLzGhMAQzPPIzPvpuTVE0VfHfd_xP_iNcwn9aNoK1f_-w0thfjM1bns8dc7t-rwaGixuZL--TsDQ2f-eo2Qb5Q2PJxbazsxU8mDUuOm6GuGn39vKrGOMQT0-Ce4OJo8kP2Gr2DfzWdGDsax6-zhdeqBeq8WMoVJXo0U4u0Hldz1hCvJuzaKwlArZh9ts8JBcBNsKb" alt="عمرة المواتير" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-5" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">عمرة المواتير</span>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="gallery-item relative border border-[#3a3230]">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj8CE6NWSkW2-0SU2AbNwpm07RFNhvhT4m5MYCHG-jRqHX6aRslp5Lr-xFws0RUT6ifu2a3ZG6ZAoDNBSXkjv1cMSObEUJQc60PGGJAQEvGda0KgP-xlCOuZCPiaFml9D_GMbhC2lxEdZXgJAqRum0k2txarlNGB0aZqkq3b-xYFU4i5gUyJLWRH1sv-IWTSmuWAd0N0WFD09eQ7K6Q_tzchDhgUd8RQ4V8OSNL2bO1qBnsGCqXTgrrNNLQfbDf61RlYeZXmXatgSg" alt="البساتم" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">البساتم</span>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="gallery-item relative border border-[#3a3230]">
+            <img src="اعمده الكرنك.jpg" alt="أعمدة الكرنك" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">أعمدة الكرنك</span>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="gallery-item relative border border-[#3a3230]">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJFJ8W4v35qqT3P8EpjlUXe9-tJ-Oux6HeKeFLga2Jaw-lSxnRtf_8eMzWGOVoGO2BzpfAK82oA1AwMhT7DFTP_b3vIKto8NJA7Wa4kJQtRwGNqsp6r7TGtWrArIGCUBh0uIbcpUxG5p_bgS85pxRmtUr4tYz4krAYL0BcNXl8tTQjwo6WPGuqX4VWP_ujkgwWS-95825vwJX7_Uv1bTBQFqQuCYZcfDW3XtTdEZwJwV2NDw1jHqkeCxPcQov11KhWWgThUzMFkDM" alt="معدات الورشة" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">معدات الورشة</span>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="gallery-item relative border border-[#3a3230]">
+            <img src="ممم.png" alt="وش سلندر" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">وش سلندر</span>
+            </div>
+          </div>
+          <!-- Item 6 — Wide -->
+          <div class="gallery-item col-span-2 relative border border-[#3a3230]">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdZXgYjzXM2BZ785PLPKAvgJ4KWvCSKb_AZZuWdSu3gMlSjH8p0hOq4Kn3_RfqkBbUO3ppqZDPLzGhMAQzPPIzPvpuTVE0VfHfd_xP_iNcwn9aNoK1f_-w0thfjM1bns8dc7t-rwaGixuZL--TsDQ2f-eo2Qb5Q2PJxbazsxU8mDUuOm6GuGn39vKrGOMQT0-Ce4OJo8kP2Gr2DfzWdGDsax6-zhdeqBeq8WMoVJXo0U4u0Hldz1hCvJuzaKwlArZh9ts8JBcBNsKb" alt="رأس المحرك" class="w-full h-full object-cover" loading="lazy" style="object-position: center 30%" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);"></div>
+          </div>
+          <!-- Item 7 -->
+          <div class="gallery-item relative border border-[#3a3230]">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj8CE6NWSkW2-0SU2AbNwpm07RFNhvhT4m5MYCHG-jRqHX6aRslp5Lr-xFws0RUT6ifu2a3ZG6ZAoDNBSXkjv1cMSObEUJQc60PGGJAQEvGda0KgP-xlCOuZCPiaFml9D_GMbhC2lxEdZXgJAqRum0k2txarlNGB0aZqkq3b-xYFU4i5gUyJLWRH1sv-IWTSmuWAd0N0WFD09eQ7K6Q_tzchDhgUd8RQ4V8OSNL2bO1qBnsGCqXTgrrNNLQfbDf61RlYeZXmXatgSg" alt="ورشة العمل" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">راس المحرك</span>
+            </div>
+          </div>
+          <!-- Item 8 -->
+          <div class="gallery-item relative border border-[#3a3230]">
+            <img src="https://media.gettyimages.com/id/664659315/photo/engineer-assembling-engine-in-racing-car-factory.jpg?s=612x612&w=0&k=20&c=2WYPEs6xWCz3xAml2YKEo5NBbDShwTcbWRavd_fR4jo=" alt="تجميع المحركات" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">تجميع المحركات</span>
+            </div>
+          </div>
+          <!-- Item 9 — icon card -->
+          <div class="gallery-item relative border border-[#3a3230] bg-[#1c1b1b] flex flex-col items-center justify-center gap-3 p-5 text-center">
+            <span class="material-symbols-outlined text-5xl" style="color: #ff6b00">settings</span>
+            <h4 class="text-base font-bold" style="color: #e5e2e1">فحص المحركات</h4>
+            <p class="text-xs" style="color: #a98a7d">فحص شامل قبل التسليم</p>
+          </div>
+          <!-- Item 10 — wide -->
+          <div class="gallery-item col-span-2 relative border border-[#3a3230]">
+            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwJFJ8W4v35qqT3P8EpjlUXe9-tJ-Oux6HeKeFLga2Jaw-lSxnRtf_8eMzWGOVoGO2BzpfAK82oA1AwMhT7DFTP_b3vIKto8NJA7Wa4kJQtRwGNqsp6r7TGtWrArIGCUBh0uIbcpUxG5p_bgS85pxRmtUr4tYz4krAYL0BcNXl8tTQjwo6WPGuqX4VWP_ujkgwWS-95825vwJX7_Uv1bTBQFqQuCYZcfDW3XtTdEZwJwV2NDw1jHqkeCxPcQov11KhWWgThUzMFkDM" alt="أعمال التشغيل الدقيقة" class="w-full h-full object-cover" loading="lazy" />
+            <div class="gallery-overlay absolute inset-0 flex items-end p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);">
+              <span class="font-bold text-sm" style="color: #ff6b00">أعمال التشغيل الدقيقة</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ OWNER ═══════════ -->
+    <section id="owner" class="py-24 bg-[#0e0e0e]">
+      <div class="max-w-6xl mx-auto px-4 md:px-16">
+        <div class="text-center mb-14">
+          <p class="text-xs font-semibold tracking-widest mb-3" style="color: #ff6b00">الإدارة</p>
+          <h2 class="text-3xl md:text-4xl font-bold" style="color: #e5e2e1">إدارة المركز</h2>
+        </div>
+
+        <div class="owner-card max-w-2xl mx-auto p-8 md:p-12 reveal">
+          <div class="flex flex-col sm:flex-row items-center sm:items-start gap-8">
+            <!-- Portrait -->
+            <div class="shrink-0">
+              <div class="w-36 h-36 md:w-44 md:h-44 overflow-hidden border-2 border-[#ff6b00]/60" style="border-radius: 2px; box-shadow: 0 0 30px rgba(255,107,0,0.2);">
+                <img src="المهندس.png" alt="المهندس عبدالله الخشن" class="w-full h-full object-cover object-top" loading="lazy" />
+              </div>
+            </div>
+            <!-- Info -->
+            <div class="text-center sm:text-right flex-1">
+              <div class="text-xs font-semibold tracking-widest mb-2" style="color: #ff6b00">مدير المركز</div>
+              <h3 class="text-2xl font-bold mb-3" style="color: #e5e2e1">المهندس عبدالله الخشن</h3>
+              <p class="text-sm leading-relaxed mb-5" style="color: #c1c7cf">خبرة طويلة في مجال عمرة المواتير والخراطة الميكانيكية — يشرف على كل عملية شخصياً لضمان أعلى معايير الجودة والدقة في التنفيذ.</p>
+              <div class="flex flex-col sm:flex-row gap-3 justify-center sm:justify-end">
+                <a href="tel:+201104716408" class="flex items-center justify-center gap-2 px-5 py-2.5 border border-[#ffb693]/40 text-[#ffb693] text-sm font-semibold hover:border-[#ffb693] transition-colors">
+                  <span class="material-symbols-outlined" style="font-size: 18px">call</span>
+                  اتصل مباشرة
+                </a>
+                <a href="https://wa.me/201104716408" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold">
+                  <span class="material-symbols-outlined" style="font-size: 18px">chat</span>
+                  واتساب
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ CONTACT ═══════════ -->
+    <section id="contact" class="py-24 bg-[#131313] border-t border-[#3a3230]">
+      <div class="max-w-6xl mx-auto px-4 md:px-16">
+        <div class="text-center mb-14">
+          <p class="text-xs font-semibold tracking-widest mb-3" style="color: #ff6b00">تواصل</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: #e5e2e1">تواصل معنا</h2>
+          <p class="text-base" style="color: #c1c7cf; max-width: 480px; margin: 0 auto">رد سريع على جميع استفساراتكم التقنية وتقديم عروض أسعار دقيقة.</p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <!-- Phone card -->
+          <div class="bg-[#201f1f] border border-[#3a3230] p-8 flex flex-col gap-6 relative reveal">
+            <div class="absolute top-0 right-0 w-10 h-0.5 bg-[#ff6b00]"></div>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 border border-[#3a3230] flex items-center justify-center shrink-0" style="background: #2a2a2a; color: #ffb693">
+                <span class="material-symbols-outlined" style="font-size: 28px">call</span>
+              </div>
+              <div>
+                <p class="text-xs font-semibold mb-1" style="color: #a98a7d">رقم الهاتف</p>
+                <p class="text-xl font-bold" style="color: #e5e2e1; direction: ltr">+20 11 0471 6408</p>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">متاحون للرد على استفساراتكم ومناقشة متطلبات الخراطة وعمرة المواتير. نقدم استشارة مجانية لتقييم حالة محركاتكم.</p>
+            <a href="tel:+201104716408" class="btn-primary flex items-center justify-center gap-3 py-4 border-2 border-[#ffb693]/50 text-[#ffb693] font-bold text-base hover:border-[#ffb693] transition-colors">
+              <span class="material-symbols-outlined">call</span>
+              اتصل الآن
+            </a>
+          </div>
+
+          <!-- WhatsApp card -->
+          <div class="whatsapp-card p-8 flex flex-col gap-6 relative reveal">
+            <div class="absolute top-0 right-0 w-10 h-0.5" style="background: #25d366"></div>
+            <div class="flex items-center gap-4">
+              <div class="w-14 h-14 flex items-center justify-center shrink-0 rounded" style="background: rgba(37,211,102,0.15); border: 1px solid rgba(37,211,102,0.3);">
+                <span class="material-symbols-outlined" style="font-size: 32px; color: #25d366">chat</span>
+              </div>
+              <div>
+                <p class="text-xs font-semibold mb-1" style="color: #25d366; opacity: 0.8">واتساب</p>
+                <p class="text-xl font-bold" style="color: #e5e2e1">تواصل معنا مباشرة</p>
+              </div>
+            </div>
+            <p class="text-sm leading-relaxed" style="color: #c1c7cf">رد سريع على جميع الاستفسارات عبر واتساب — أرسل صورة لمشكلة محركك واحصل على تقييم فوري.</p>
+            <a href="https://wa.me/201104716408" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-3 py-4 rounded font-bold text-base w-full text-center">
+              <span class="material-symbols-outlined">chat</span>
+              راسلنا على واتساب الآن
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="py-10 px-4 md:px-16 bg-[#0e0e0e] border-t border-[#3a3230]">
+      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex flex-col items-center md:items-start gap-2">
+          <span class="text-xl font-bold" style="color: #ffb693">المهندس للخراطة</span>
+          <p class="text-xs" style="color: #a98a7d">© 2024 المهندس للخراطة الميكانيكية وعمرة المواتير. جميع الحقوق محفوظة.</p>
+        </div>
+        <div class="flex items-center gap-8">
+          <a href="#home" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">الرئيسية</a>
+          <a href="#services" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">خدماتنا</a>
+          <a href="#gallery" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">المعرض</a>
+          <a href="#contact" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">اتصل بنا</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a
+      href="https://wa.me/201104716408"
+      target="_blank"
+      rel="noopener"
+      class="fixed bottom-6 left-6 z-50 w-14 h-14 flex items-center justify-center rounded-full shadow-2xl group"
+      style="background: #25d366; will-change: transform; transition: transform 0.2s ease;"
+    >
+      <span class="material-symbols-outlined text-white" style="font-size: 28px">chat</span>
+      <span class="absolute left-16 px-3 py-1 rounded border text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity" style="background: #201f1f; color: #e5e2e1; border-color: #3a3230">تواصل معنا</span>
+    </a>
+
+    <!-- External JavaScript -->
+    <script src="script.js"></script>
+  </body>
+</html>
