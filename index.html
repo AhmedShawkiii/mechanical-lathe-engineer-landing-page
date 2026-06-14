@@ -84,7 +84,7 @@
 
       <!-- CTA -->
       <a
-        href="https://wa.me/201104716408"
+        href="https://wa.me/201225774141"
         target="_blank"
         rel="noopener"
         class="btn-whatsapp flex items-center gap-2 px-5 py-2 rounded text-sm font-bold"
@@ -133,11 +133,11 @@
 
             <!-- CTAs -->
             <div class="flex flex-col sm:flex-row gap-4 mb-12">
-              <a href="https://wa.me/201104716408" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-3 px-7 py-4 rounded font-bold text-base">
+              <a href="https://wa.me/201225774141" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-3 px-7 py-4 rounded font-bold text-base">
                 <span class="material-symbols-outlined">chat</span>
                 تواصل عبر واتساب
               </a>
-              <a href="tel:+201104716408" class="flex items-center justify-center gap-3 px-7 py-4 rounded font-bold text-base border-2 border-[#c1c7cf]/40 text-[#c1c7cf] hover:border-[#ffb693] hover:text-[#ffb693] transition-colors">
+              <a href="tel:+201159391383" class="flex items-center justify-center gap-3 px-7 py-4 rounded font-bold text-base border-2 border-[#c1c7cf]/40 text-[#c1c7cf] hover:border-[#ffb693] hover:text-[#ffb693] transition-colors">
                 <span class="material-symbols-outlined">call</span>
                 اتصل بنا الآن
               </a>
@@ -194,7 +194,367 @@
         </div>
       </div>
     </section>
+<style>
+  @keyframes piston1 { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-28px)} }
+  @keyframes piston2 { 0%,100%{transform:translateY(-20px)} 50%{transform:translateY(8px)} }
+  @keyframes piston3 { 0%,100%{transform:translateY(-14px)} 25%{transform:translateY(14px)} 75%{transform:translateY(-14px)} }
+  @keyframes piston4 { 0%,100%{transform:translateY(-28px)} 50%{transform:translateY(0)} }
+  @keyframes conrod1 { 0%,100%{transform:rotate(-18deg)} 50%{transform:rotate(18deg)} }
+  @keyframes conrod2 { 0%,100%{transform:rotate(18deg)} 50%{transform:rotate(-18deg)} }
+  @keyframes conrod3 { 0%,100%{transform:rotate(12deg)} 25%{transform:rotate(-16deg)} 75%{transform:rotate(12deg)} }
+  @keyframes conrod4 { 0%,100%{transform:rotate(-16deg)} 50%{transform:rotate(14deg)} }
+  @keyframes crank  { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
+  @keyframes glowPulse { 0%,100%{opacity:.6} 50%{opacity:1} }
+  @keyframes revealUp { from{opacity:0;transform:translateY(30px)} to{opacity:1;transform:translateY(0)} }
+  @keyframes shimmer { 0%,100%{opacity:.15} 50%{opacity:.45} }
+  @keyframes valveOpen { 0%,40%,100%{transform:translateY(0)} 50%,90%{transform:translateY(5px)} }
+  @keyframes exhaustPuff { 0%{transform:translateY(0) scale(1);opacity:.5} 100%{transform:translateY(-25px) scale(1.8);opacity:0} }
+  @keyframes blockGlow { 0%,100%{filter:drop-shadow(0 0 4px #ff6b0022)} 50%{filter:drop-shadow(0 0 14px #ff6b0055)} }
 
+  .eng-section-reveal { animation: revealUp .9s cubic-bezier(.22,1,.36,1) both; }
+  .eng-reveal-d1 { animation-delay:.1s }
+  .eng-reveal-d2 { animation-delay:.25s }
+  .eng-reveal-d3 { animation-delay:.4s }
+  .eng-reveal-d4 { animation-delay:.55s }
+
+  .ep1 { animation: piston1 .72s ease-in-out infinite; }
+  .ep2 { animation: piston2 .72s ease-in-out infinite; }
+  .ep3 { animation: piston3 .72s ease-in-out infinite; }
+  .ep4 { animation: piston4 .72s ease-in-out infinite; }
+  .ecr1 { animation: conrod1 .72s ease-in-out infinite; transform-origin: 50% 100%; }
+  .ecr2 { animation: conrod2 .72s ease-in-out infinite; transform-origin: 50% 100%; }
+  .ecr3 { animation: conrod3 .72s ease-in-out infinite; transform-origin: 50% 100%; }
+  .ecr4 { animation: conrod4 .72s ease-in-out infinite; transform-origin: 50% 100%; }
+  .ecrank-spin { animation: crank .72s linear infinite; transform-origin: 50% 50%; }
+  .eglow1 { animation: glowPulse .72s ease-in-out infinite; }
+  .eglow2 { animation: glowPulse .72s ease-in-out infinite .18s; }
+  .eglow3 { animation: glowPulse .72s ease-in-out infinite .36s; }
+  .eglow4 { animation: glowPulse .72s ease-in-out infinite .54s; }
+  .eshimmer { animation: shimmer 3s ease-in-out infinite; }
+  .evalve1 { animation: valveOpen .72s ease-in-out infinite; }
+  .evalve2 { animation: valveOpen .72s ease-in-out infinite .18s; }
+  .evalve3 { animation: valveOpen .72s ease-in-out infinite .36s; }
+  .evalve4 { animation: valveOpen .72s ease-in-out infinite .54s; }
+  .eexh1 { animation: exhaustPuff 1.2s ease-out infinite; }
+  .eexh2 { animation: exhaustPuff 1.2s ease-out infinite .3s; }
+  .eexh3 { animation: exhaustPuff 1.2s ease-out infinite .6s; }
+  .eexh4 { animation: exhaustPuff 1.2s ease-out infinite .9s; }
+  .eblockGlow { animation: blockGlow 2s ease-in-out infinite; }
+
+  .eng-feat-item { display:flex; align-items:center; gap:12px; padding:10px 14px; border:0.5px solid #3a3230; background:#1c1b1b; border-right:3px solid #ff6b00; }
+  .eng-feat-check { width:22px; height:22px; background:#ff6b0022; border:1px solid #ff6b0066; border-radius:3px; display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .ep1,.ep2,.ep3,.ep4,.ecr1,.ecr2,.ecr3,.ecr4,.ecrank-spin,
+    .eglow1,.eglow2,.eglow3,.eglow4,.eshimmer,
+    .evalve1,.evalve2,.evalve3,.evalve4,
+    .eexh1,.eexh2,.eexh3,.eexh4,.eblockGlow { animation: none; }
+  }
+
+  @media (max-width: 640px) {
+    .eng-grid { grid-template-columns: 1fr !important; }
+  }
+</style>
+
+<!-- ═══════════ ENGINE PRECISION SECTION ═══════════ -->
+<section style="background:#0e0e0e; border-top:3px solid #ff6b00; position:relative; overflow:hidden; font-family:'IBM Plex Sans Arabic',sans-serif; direction:rtl;">
+
+  <!-- Grid overlay -->
+  <div style="position:absolute;inset:0;background-image:repeating-linear-gradient(0deg,transparent,transparent 79px,rgba(255,107,0,0.03) 80px),repeating-linear-gradient(90deg,transparent,transparent 79px,rgba(255,107,0,0.03) 80px);pointer-events:none;z-index:0;"></div>
+
+  <!-- Ambient glow -->
+  <div style="position:absolute;left:30%;top:50%;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(255,107,0,0.07) 0%,transparent 70%);transform:translate(-50%,-50%);pointer-events:none;z-index:0;"></div>
+
+  <div style="max-width:1100px;margin:0 auto;padding:64px 24px;position:relative;z-index:1;">
+    <div class="eng-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;">
+
+      <!-- RIGHT: Text content -->
+      <div class="eng-section-reveal eng-reveal-d1" style="order:1;">
+
+        <!-- Eyebrow -->
+        <div style="display:inline-flex;align-items:center;gap:8px;margin-bottom:20px;padding:6px 14px;border:0.5px solid rgba(255,107,0,.35);background:rgba(255,107,0,.08);border-radius:99px;">
+          <span style="width:7px;height:7px;border-radius:50%;background:#ff6b00;display:inline-block;"></span>
+          <span style="font-size:11px;font-weight:600;color:#ffb693;letter-spacing:.12em;">تقنية هندسية متقدمة</span>
+        </div>
+
+        <!-- Heading -->
+        <h2 style="font-size:clamp(1.5rem,3vw,2.2rem);font-weight:700;color:#e5e2e1;line-height:1.35;margin:0 0 16px;letter-spacing:-0.02em;">
+          دقة هندسية تبدأ من<br>
+          <span style="color:#ff6b00;">قلب المحرك</span>
+        </h2>
+
+        <!-- Description -->
+        <p class="eng-section-reveal eng-reveal-d2" style="color:#c1c7cf;font-size:.95rem;line-height:1.8;margin:0 0 28px;">
+          نعيد بناء كل محرك من الداخل — تجليخ دقيق، خراطة احترافية، وفحص شامل لكل قطعة. نضمن لك أداءً يعود كالجديد مع توفير حقيقي في الوقود وإطالة لعمر المحرك.
+        </p>
+
+        <!-- Feature list -->
+        <div class="eng-section-reveal eng-reveal-d3" style="display:flex;flex-direction:column;gap:8px;margin-bottom:28px;">
+          <div class="eng-feat-item">
+            <div class="eng-feat-check">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6b00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <span style="color:#e5e2e1;font-size:.9rem;font-weight:600;">عمرة المواتير</span>
+              <span style="color:#a98a7d;font-size:.8rem;margin-right:8px;">— إعادة بناء شاملة للمحرك</span>
+            </div>
+          </div>
+          <div class="eng-feat-item">
+            <div class="eng-feat-check">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6b00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <span style="color:#e5e2e1;font-size:.9rem;font-weight:600;">تجليخ الكرنك</span>
+              <span style="color:#a98a7d;font-size:.8rem;margin-right:8px;">— دقة تصل لجزء من المليمتر</span>
+            </div>
+          </div>
+          <div class="eng-feat-item">
+            <div class="eng-feat-check">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6b00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <span style="color:#e5e2e1;font-size:.9rem;font-weight:600;">خراطة وش السلندر</span>
+              <span style="color:#a98a7d;font-size:.8rem;margin-right:8px;">— تجهيز رأس المحرك باحتراف</span>
+            </div>
+          </div>
+          <div class="eng-feat-item">
+            <div class="eng-feat-check">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 6l3 3 5-5" stroke="#ff6b00" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </div>
+            <div>
+              <span style="color:#e5e2e1;font-size:.9rem;font-weight:600;">فحص وتشخيص دقيق</span>
+              <span style="color:#a98a7d;font-size:.8rem;margin-right:8px;">— أحدث أجهزة الكشف</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stats row -->
+        <div class="eng-section-reveal eng-reveal-d4" style="display:grid;grid-template-columns:repeat(3,1fr);border:0.5px solid #3a3230;background:#1c1b1b;">
+          <div style="text-align:center;padding:14px 8px;border-left:0.5px solid #3a3230;">
+            <div style="font-size:1.4rem;font-weight:700;color:#ff6b00;">+25</div>
+            <div style="font-size:.7rem;color:#a98a7d;margin-top:3px;">سنة خبرة</div>
+          </div>
+          <div style="text-align:center;padding:14px 8px;border-left:0.5px solid #3a3230;">
+            <div style="font-size:1.4rem;font-weight:700;color:#ff6b00;">CNC</div>
+            <div style="font-size:.7rem;color:#a98a7d;margin-top:3px;">معدات حديثة</div>
+          </div>
+          <div style="text-align:center;padding:14px 8px;">
+            <div style="font-size:1.4rem;font-weight:700;color:#ff6b00;">١٠٠٪</div>
+            <div style="font-size:.7rem;color:#a98a7d;margin-top:3px;">جودة مضمونة</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- LEFT: Engine SVG -->
+      <div class="eng-section-reveal eng-reveal-d2" style="order:2;display:flex;justify-content:center;align-items:center;">
+        <div style="background:#181717;border:0.5px solid #3a3230;border-radius:12px;padding:20px 16px;position:relative;overflow:hidden;box-shadow:0 0 60px rgba(255,107,0,.08);width:100%;max-width:400px;">
+
+          <!-- Panel shimmer top -->
+          <div class="eshimmer" style="position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#ff6b00,transparent);"></div>
+
+          <!-- Label -->
+          <div style="text-align:center;margin-bottom:12px;">
+            <span style="font-size:10px;font-weight:600;color:#ff6b00;letter-spacing:.15em;">● محرك V4 — تشغيل مباشر</span>
+          </div>
+
+          <!-- ENGINE SVG -->
+          <svg viewBox="0 0 360 340" width="100%" xmlns="http://www.w3.org/2000/svg" aria-label="محرك V4 متحرك">
+            <defs>
+              <linearGradient id="eng-blockGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#2e2c2b"/>
+                <stop offset="50%" stop-color="#252322"/>
+                <stop offset="100%" stop-color="#1c1b1a"/>
+              </linearGradient>
+              <linearGradient id="eng-pistonGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#4a4846"/>
+                <stop offset="100%" stop-color="#2a2826"/>
+              </linearGradient>
+              <radialGradient id="eng-boreGrad" cx="50%" cy="20%" r="60%">
+                <stop offset="0%" stop-color="#1a1918"/>
+                <stop offset="100%" stop-color="#0e0d0c"/>
+              </radialGradient>
+              <linearGradient id="eng-headGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#383534"/>
+                <stop offset="100%" stop-color="#252322"/>
+              </linearGradient>
+              <radialGradient id="eng-fireGlow" cx="50%" cy="100%" r="70%">
+                <stop offset="0%" stop-color="#ff6b00" stop-opacity=".9"/>
+                <stop offset="60%" stop-color="#ff4400" stop-opacity=".4"/>
+                <stop offset="100%" stop-color="#ff6b00" stop-opacity="0"/>
+              </radialGradient>
+              <linearGradient id="eng-crankGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#3d3b39"/>
+                <stop offset="100%" stop-color="#1f1e1d"/>
+              </linearGradient>
+              <linearGradient id="eng-rodGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#3a3836"/>
+                <stop offset="50%" stop-color="#4a4846"/>
+                <stop offset="100%" stop-color="#3a3836"/>
+              </linearGradient>
+              <linearGradient id="eng-panGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#1e1d1c"/>
+                <stop offset="100%" stop-color="#151413"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Engine Block -->
+            <g class="eblockGlow">
+              <rect x="28" y="120" width="304" height="140" rx="6" fill="url(#eng-blockGrad)" stroke="#3a3230" stroke-width="1"/>
+              <rect x="28" y="126" width="304" height="4" fill="#2a2927"/>
+              <rect x="28" y="254" width="304" height="4" fill="#2a2927"/>
+              <line x1="100" y1="124" x2="100" y2="256" stroke="#2a2927" stroke-width="2"/>
+              <line x1="178" y1="124" x2="178" y2="256" stroke="#2a2927" stroke-width="2"/>
+              <line x1="257" y1="124" x2="257" y2="256" stroke="#2a2927" stroke-width="2"/>
+            </g>
+
+            <!-- Cylinder Bores -->
+            <rect x="40"  y="62" width="50" height="136" rx="4" fill="url(#eng-boreGrad)" stroke="#3a3230" stroke-width="1"/>
+            <rect x="118" y="62" width="50" height="136" rx="4" fill="url(#eng-boreGrad)" stroke="#3a3230" stroke-width="1"/>
+            <rect x="196" y="62" width="50" height="136" rx="4" fill="url(#eng-boreGrad)" stroke="#3a3230" stroke-width="1"/>
+            <rect x="274" y="62" width="50" height="136" rx="4" fill="url(#eng-boreGrad)" stroke="#3a3230" stroke-width="1"/>
+
+            <!-- Cylinder Head -->
+            <rect x="22" y="24" width="316" height="44" rx="5" fill="url(#eng-headGrad)" stroke="#3a3230" stroke-width="1"/>
+            <circle cx="38"  cy="46" r="4" fill="#1c1b1a" stroke="#3a3230" stroke-width=".8"/>
+            <circle cx="322" cy="46" r="4" fill="#1c1b1a" stroke="#3a3230" stroke-width=".8"/>
+            <circle cx="180" cy="46" r="4" fill="#1c1b1a" stroke="#3a3230" stroke-width=".8"/>
+            <circle cx="109" cy="46" r="4" fill="#1c1b1a" stroke="#3a3230" stroke-width=".8"/>
+            <circle cx="251" cy="46" r="4" fill="#1c1b1a" stroke="#3a3230" stroke-width=".8"/>
+            <rect x="22" y="24" width="316" height="5" rx="3" fill="#3a3836"/>
+
+            <!-- Valves -->
+            <g class="evalve1"><rect x="48"  y="50" width="8" height="14" rx="2" fill="#4a4846" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve2"><rect x="126" y="50" width="8" height="14" rx="2" fill="#4a4846" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve3"><rect x="204" y="50" width="8" height="14" rx="2" fill="#4a4846" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve4"><rect x="282" y="50" width="8" height="14" rx="2" fill="#4a4846" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve2"><rect x="62"  y="50" width="8" height="14" rx="2" fill="#3a3836" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve1"><rect x="140" y="50" width="8" height="14" rx="2" fill="#3a3836" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve4"><rect x="218" y="50" width="8" height="14" rx="2" fill="#3a3836" stroke="#555351" stroke-width=".5"/></g>
+            <g class="evalve3"><rect x="296" y="50" width="8" height="14" rx="2" fill="#3a3836" stroke="#555351" stroke-width=".5"/></g>
+
+            <!-- Combustion Glow -->
+            <g class="eglow1"><rect x="41"  y="63" width="48" height="22" rx="2" fill="url(#eng-fireGlow)"/></g>
+            <g class="eglow2"><rect x="119" y="63" width="48" height="22" rx="2" fill="url(#eng-fireGlow)"/></g>
+            <g class="eglow3"><rect x="197" y="63" width="48" height="22" rx="2" fill="url(#eng-fireGlow)"/></g>
+            <g class="eglow4"><rect x="275" y="63" width="48" height="22" rx="2" fill="url(#eng-fireGlow)"/></g>
+
+            <!-- Exhaust Puffs -->
+            <circle class="eexh1" cx="58"  cy="20" r="5" fill="#ff6b00" opacity=".3"/>
+            <circle class="eexh2" cx="136" cy="20" r="5" fill="#ff6b00" opacity=".3"/>
+            <circle class="eexh3" cx="214" cy="20" r="5" fill="#ff6b00" opacity=".3"/>
+            <circle class="eexh4" cx="292" cy="20" r="5" fill="#ff6b00" opacity=".3"/>
+
+            <!-- Pistons -->
+            <g class="ep1">
+              <rect x="44" y="100" width="42" height="50" rx="3" fill="url(#eng-pistonGrad)" stroke="#555351" stroke-width=".8"/>
+              <rect x="44" y="105" width="42" height="3" rx="1" fill="#555351"/>
+              <rect x="44" y="111" width="42" height="3" rx="1" fill="#555351"/>
+              <circle cx="65" cy="138" r="5" fill="#1c1b1a" stroke="#555351" stroke-width=".8"/>
+            </g>
+            <g class="ep2">
+              <rect x="122" y="100" width="42" height="50" rx="3" fill="url(#eng-pistonGrad)" stroke="#555351" stroke-width=".8"/>
+              <rect x="122" y="105" width="42" height="3" rx="1" fill="#555351"/>
+              <rect x="122" y="111" width="42" height="3" rx="1" fill="#555351"/>
+              <circle cx="143" cy="138" r="5" fill="#1c1b1a" stroke="#555351" stroke-width=".8"/>
+            </g>
+            <g class="ep3">
+              <rect x="200" y="100" width="42" height="50" rx="3" fill="url(#eng-pistonGrad)" stroke="#555351" stroke-width=".8"/>
+              <rect x="200" y="105" width="42" height="3" rx="1" fill="#555351"/>
+              <rect x="200" y="111" width="42" height="3" rx="1" fill="#555351"/>
+              <circle cx="221" cy="138" r="5" fill="#1c1b1a" stroke="#555351" stroke-width=".8"/>
+            </g>
+            <g class="ep4">
+              <rect x="278" y="100" width="42" height="50" rx="3" fill="url(#eng-pistonGrad)" stroke="#555351" stroke-width=".8"/>
+              <rect x="278" y="105" width="42" height="3" rx="1" fill="#555351"/>
+              <rect x="278" y="111" width="42" height="3" rx="1" fill="#555351"/>
+              <circle cx="299" cy="138" r="5" fill="#1c1b1a" stroke="#555351" stroke-width=".8"/>
+            </g>
+
+            <!-- Connecting Rods -->
+            <g class="ecr1" style="transform-origin:65px 190px;">
+              <line x1="65" y1="150" x2="65" y2="190" stroke="url(#eng-rodGrad)" stroke-width="6" stroke-linecap="round"/>
+              <line x1="65" y1="150" x2="65" y2="190" stroke="#555351" stroke-width=".6"/>
+            </g>
+            <g class="ecr2" style="transform-origin:143px 190px;">
+              <line x1="143" y1="150" x2="143" y2="190" stroke="url(#eng-rodGrad)" stroke-width="6" stroke-linecap="round"/>
+              <line x1="143" y1="150" x2="143" y2="190" stroke="#555351" stroke-width=".6"/>
+            </g>
+            <g class="ecr3" style="transform-origin:221px 190px;">
+              <line x1="221" y1="150" x2="221" y2="190" stroke="url(#eng-rodGrad)" stroke-width="6" stroke-linecap="round"/>
+              <line x1="221" y1="150" x2="221" y2="190" stroke="#555351" stroke-width=".6"/>
+            </g>
+            <g class="ecr4" style="transform-origin:299px 190px;">
+              <line x1="299" y1="150" x2="299" y2="190" stroke="url(#eng-rodGrad)" stroke-width="6" stroke-linecap="round"/>
+              <line x1="299" y1="150" x2="299" y2="190" stroke="#555351" stroke-width=".6"/>
+            </g>
+
+            <!-- Crankshaft -->
+            <rect x="26" y="204" width="308" height="18" rx="4" fill="url(#eng-crankGrad)" stroke="#3a3230" stroke-width="1"/>
+            <circle cx="65"  cy="213" r="10" fill="url(#eng-crankGrad)" stroke="#555351" stroke-width="1"/>
+            <circle cx="143" cy="213" r="10" fill="url(#eng-crankGrad)" stroke="#555351" stroke-width="1"/>
+            <circle cx="221" cy="213" r="10" fill="url(#eng-crankGrad)" stroke="#555351" stroke-width="1"/>
+            <circle cx="299" cy="213" r="10" fill="url(#eng-crankGrad)" stroke="#555351" stroke-width="1"/>
+            <g class="ecrank-spin" style="transform-origin:65px 213px;">
+              <rect x="59" y="207" width="12" height="20" rx="3" fill="#ff6b00" opacity=".7"/>
+            </g>
+            <g class="ecrank-spin" style="transform-origin:143px 213px; animation-delay:-.18s;">
+              <rect x="137" y="207" width="12" height="20" rx="3" fill="#ff6b00" opacity=".7"/>
+            </g>
+            <g class="ecrank-spin" style="transform-origin:221px 213px; animation-delay:-.36s;">
+              <rect x="215" y="207" width="12" height="20" rx="3" fill="#ff6b00" opacity=".7"/>
+            </g>
+            <g class="ecrank-spin" style="transform-origin:299px 213px; animation-delay:-.54s;">
+              <rect x="293" y="207" width="12" height="20" rx="3" fill="#ff6b00" opacity=".7"/>
+            </g>
+            <circle cx="65"  cy="213" r="3.5" fill="#ff6b00" opacity=".6"/>
+            <circle cx="143" cy="213" r="3.5" fill="#ff6b00" opacity=".6"/>
+            <circle cx="221" cy="213" r="3.5" fill="#ff6b00" opacity=".6"/>
+            <circle cx="299" cy="213" r="3.5" fill="#ff6b00" opacity=".6"/>
+
+            <!-- Oil Pan -->
+            <path d="M28 258 Q28 300 50 305 L310 305 Q332 300 332 258 Z" fill="url(#eng-panGrad)" stroke="#3a3230" stroke-width="1"/>
+            <circle cx="180" cy="298" r="6" fill="#2a2927" stroke="#555351" stroke-width=".8"/>
+            <line x1="180" y1="293" x2="180" y2="303" stroke="#555351" stroke-width="1.5"/>
+            <ellipse cx="180" cy="282" rx="100" ry="6" fill="#2a2927" stroke="#3a3230" stroke-width=".5" opacity=".8"/>
+            <line x1="130" y1="282" x2="230" y2="282" stroke="#3a3230" stroke-width=".5" stroke-dasharray="4 4" opacity=".5"/>
+
+            <!-- Cooling water jacket lines -->
+            <path d="M28 155 Q40 160 52 155 Q64 150 76 155 Q88 160 100 155" stroke="#3a8bd4" stroke-width=".8" fill="none" opacity=".3" stroke-dasharray="3 3"/>
+            <path d="M106 155 Q118 160 130 155 Q142 150 154 155 Q166 160 178 155" stroke="#3a8bd4" stroke-width=".8" fill="none" opacity=".3" stroke-dasharray="3 3"/>
+            <path d="M184 155 Q196 160 208 155 Q220 150 232 155 Q244 160 256 155" stroke="#3a8bd4" stroke-width=".8" fill="none" opacity=".3" stroke-dasharray="3 3"/>
+            <path d="M262 155 Q274 160 286 155 Q298 150 310 155 Q322 160 332 155" stroke="#3a8bd4" stroke-width=".8" fill="none" opacity=".3" stroke-dasharray="3 3"/>
+
+            <!-- Spark Plugs -->
+            <rect x="60"  y="18" width="6" height="14" rx="1" fill="#2a2927" stroke="#555351" stroke-width=".8"/>
+            <rect x="138" y="18" width="6" height="14" rx="1" fill="#2a2927" stroke="#555351" stroke-width=".8"/>
+            <rect x="216" y="18" width="6" height="14" rx="1" fill="#2a2927" stroke="#555351" stroke-width=".8"/>
+            <rect x="294" y="18" width="6" height="14" rx="1" fill="#2a2927" stroke="#555351" stroke-width=".8"/>
+            <circle cx="63"  cy="20" r="3" fill="#ffcc00" opacity=".7"/>
+            <circle cx="141" cy="20" r="3" fill="#ffcc00" opacity=".7"/>
+            <circle cx="219" cy="20" r="3" fill="#ffcc00" opacity=".7"/>
+            <circle cx="297" cy="20" r="3" fill="#ffcc00" opacity=".7"/>
+
+            <!-- Bottom label -->
+            <text x="180" y="319" text-anchor="middle" font-size="9" fill="#a98a7d" font-family="IBM Plex Sans Arabic, sans-serif">● بان الزيت — حوض التشحيم</text>
+          </svg>
+
+          <!-- Component key badges -->
+          <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:12px;justify-content:center;">
+            <span style="font-size:9.5px;padding:3px 9px;border:0.5px solid #3a3230;color:#c1c7cf;background:#1c1b1b;border-radius:3px;">البساتم</span>
+            <span style="font-size:9.5px;padding:3px 9px;border:0.5px solid #3a3230;color:#c1c7cf;background:#1c1b1b;border-radius:3px;">عمود الكرنك</span>
+            <span style="font-size:9.5px;padding:3px 9px;border:0.5px solid #ff6b0044;color:#ffb693;background:#1c1b1b;border-radius:3px;">● احتراق نشط</span>
+            <span style="font-size:9.5px;padding:3px 9px;border:0.5px solid #3a8bd444;color:#7ab5e0;background:#1c1b1b;border-radius:3px;">● تبريد مائي</span>
+          </div>
+
+          <!-- Panel shimmer bottom -->
+          <div class="eshimmer" style="position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#ff6b00,transparent);animation-delay:.5s;"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ═══════════ END ENGINE SECTION ═══════════ -->
     <!-- ═══════════ SERVICES ═══════════ -->
     <section id="services" class="py-24 bg-[#0e0e0e]">
       <div class="max-w-6xl mx-auto px-4 md:px-16">
@@ -338,11 +698,11 @@
               <h3 class="text-2xl font-bold mb-3" style="color: #e5e2e1">المهندس عبدالله الخشن</h3>
               <p class="text-sm leading-relaxed mb-5" style="color: #c1c7cf">خبرة طويلة في مجال عمرة المواتير والخراطة الميكانيكية — يشرف على كل عملية شخصياً لضمان أعلى معايير الجودة والدقة في التنفيذ.</p>
               <div class="flex flex-col sm:flex-row gap-3 justify-center sm:justify-end">
-                <a href="tel:+201104716408" class="flex items-center justify-center gap-2 px-5 py-2.5 border border-[#ffb693]/40 text-[#ffb693] text-sm font-semibold hover:border-[#ffb693] transition-colors">
+                <a href="tel:+201159391383" class="flex items-center justify-center gap-2 px-5 py-2.5 border border-[#ffb693]/40 text-[#ffb693] text-sm font-semibold hover:border-[#ffb693] transition-colors">
                   <span class="material-symbols-outlined" style="font-size: 18px">call</span>
                   اتصل مباشرة
                 </a>
-                <a href="https://wa.me/201104716408" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold">
+                <a href="https://wa.me/201225774141" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-semibold">
                   <span class="material-symbols-outlined" style="font-size: 18px">chat</span>
                   واتساب
                 </a>
@@ -372,11 +732,11 @@
               </div>
               <div>
                 <p class="text-xs font-semibold mb-1" style="color: #a98a7d">رقم الهاتف</p>
-                <p class="text-xl font-bold" style="color: #e5e2e1; direction: ltr">+20 11 0471 6408</p>
+                <p class="text-xl font-bold" style="color: #e5e2e1; direction: ltr">+20 11 5939 1383</p>
               </div>
             </div>
             <p class="text-sm leading-relaxed" style="color: #c1c7cf">متاحون للرد على استفساراتكم ومناقشة متطلبات الخراطة وعمرة المواتير. نقدم استشارة مجانية لتقييم حالة محركاتكم.</p>
-            <a href="tel:+201104716408" class="btn-primary flex items-center justify-center gap-3 py-4 border-2 border-[#ffb693]/50 text-[#ffb693] font-bold text-base hover:border-[#ffb693] transition-colors">
+            <a href="tel:+201159391383" class="btn-primary flex items-center justify-center gap-3 py-4 border-2 border-[#ffb693]/50 text-[#ffb693] font-bold text-base hover:border-[#ffb693] transition-colors">
               <span class="material-symbols-outlined">call</span>
               اتصل الآن
             </a>
@@ -395,7 +755,7 @@
               </div>
             </div>
             <p class="text-sm leading-relaxed" style="color: #c1c7cf">رد سريع على جميع الاستفسارات عبر واتساب — أرسل صورة لمشكلة محركك واحصل على تقييم فوري.</p>
-            <a href="https://wa.me/201104716408" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-3 py-4 rounded font-bold text-base w-full text-center">
+            <a href="https://wa.me/201225774141" target="_blank" rel="noopener" class="btn-whatsapp flex items-center justify-center gap-3 py-4 rounded font-bold text-base w-full text-center">
               <span class="material-symbols-outlined">chat</span>
               راسلنا على واتساب الآن
             </a>
@@ -405,85 +765,141 @@
     </section>
 
     <!-- ═══════════ FOOTER ═══════════ -->
-    <footer class="py-10 px-4 md:px-16 bg-[#0e0e0e] border-t border-[#3a3230]">
-      <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
-        <div class="flex flex-col items-center md:items-start gap-2">
-          <span class="text-xl font-bold" style="color: #ffb693">المهندس للخراطة</span>
-          <p class="text-xs" style="color: #a98a7d">المهندس للخراطة الميكانيكية وعمرة المواتير. جميع الحقوق محفوظة.</p>
-          <style>
-  .dev-link {
-    color: #ffb693;
-    transition: all 0.3s ease;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: 700;
-    font-size: 1rem;
-    position: relative;
-  }
+  
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="py-10 px-4 md:px-16 bg-[#0e0e0e] border-t border-[#3a3230]">
 
-  .dev-link:hover {
-    color: #ffffff;
-    text-shadow: 0 0 10px #ffb693, 0 0 20px #ffb693;
-    transform: translateY(-2px);
-  }
+  <style>
+    .dev-link {
+      color: #ffb693;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+    }
 
-  .dev-link:active {
-    transform: scale(0.95);
-  }
+    .dev-link:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px #ffb693, 0 0 20px #ffb693;
+      transform: translateY(-2px);
+    }
 
-  .dev-link svg {
-    transition: transform 0.3s ease;
-  }
+    .footer-whatsapp {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #25d366;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
 
-  .dev-link:hover svg {
-    transform: rotate(10deg) scale(1.1);
-  }
+    .footer-whatsapp:hover {
+      color: #ffffff;
+      text-shadow: 0 0 10px #25d366;
+      transform: translateY(-2px);
+    }
 
-  .dev-link::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background: #ffb693;
-    transition: 0.3s;
-  }
+    .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
 
-  .dev-link:hover::after {
-    width: 100%;
-  }
-</style>
+    .footer-nav a {
+      color: #a98a7d;
+      font-size: 12px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
 
-<p class="text-xs" style="color: #a98a7d">
-  تصميم وتطوير:
-  <a href="https://www.linkedin.com/in/ahmed-shawki-8538042b0/"
-     target="_blank"
-     rel="noopener noreferrer"
-     class="dev-link">
+    .footer-nav a:hover {
+      color: #ffb693;
+    }
+  </style>
 
-    البشمهندس أحمد شوقي
+  <div class="max-w-6xl mx-auto flex flex-col items-center text-center gap-4">
 
-    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-      <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM6.82 20.45H3.86V9h2.96v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
-    </svg>
+    <span class="text-xl font-bold" style="color:#ffb693">
+      المهندس للخراطة الميكانيكية
+    </span>
 
-  </a>
-</p>
-        </div>
-        <div class="flex items-center gap-8">
-          <a href="#home" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">الرئيسية</a>
-          <a href="#services" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">خدماتنا</a>
-          <a href="#gallery" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">المعرض</a>
-          <a href="#contact" class="text-xs hover:text-[#ffb693] transition-colors" style="color: #a98a7d">اتصل بنا</a>
-        </div>
-      </div>
-    </footer>
+    <p class="text-xs" style="color:#a98a7d">
+      المهندس للخراطة الميكانيكية وعمرة المواتير. جميع الحقوق محفوظة.
+    </p>
 
+    <div style="
+      width:60px;
+      height:2px;
+      background:#ff6b00;
+      margin:6px 0;
+    "></div>
+
+    <div class="flex flex-col items-center gap-3">
+
+      <span style="
+        color:#a98a7d;
+        font-size:12px;
+        letter-spacing:1px;
+      ">
+        تصميم وتطوير
+      </span>
+
+      <a href="https://www.linkedin.com/in/ahmed-shawki-8538042b0/"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="dev-link">
+
+        البشمهندس أحمد شوقي
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="16"
+             height="16"
+             fill="currentColor"
+             viewBox="0 0 24 24">
+          <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.95v5.66H9.37V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM6.82 20.45H3.86V9h2.96v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+        </svg>
+
+      </a>
+
+      <a href="https://wa.me/201102142050"
+         target="_blank"
+         rel="noopener noreferrer"
+         class="footer-whatsapp">
+
+        <svg xmlns="http://www.w3.org/2000/svg"
+             width="18"
+             height="18"
+             fill="currentColor"
+             viewBox="0 0 24 24">
+          <path d="M20.52 3.48A11.8 11.8 0 0 0 12.04 0C5.42 0 .04 5.38.04 12c0 2.12.55 4.19 1.6 6.02L0 24l6.14-1.61A11.93 11.93 0 0 0 12.04 24C18.66 24 24 18.62 24 12c0-3.2-1.25-6.21-3.48-8.52Z"/>
+        </svg>
+
+        01102142050
+
+      </a>
+
+    </div>
+
+    <div class="footer-nav">
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتنا</a>
+      <a href="#gallery">المعرض</a>
+      <a href="#contact">اتصل بنا</a>
+    </div>
+
+  </div>
+
+</footer>
     <!-- Floating WhatsApp Button -->
     <a
-      href="https://wa.me/201104716408"
+      href="https://wa.me/201225774141"
       target="_blank"
       rel="noopener"
       class="fixed bottom-6 left-6 z-50 w-14 h-14 flex items-center justify-center rounded-full shadow-2xl group"
